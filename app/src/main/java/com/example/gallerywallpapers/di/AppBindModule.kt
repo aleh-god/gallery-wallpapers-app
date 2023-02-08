@@ -1,6 +1,6 @@
 package com.example.gallerywallpapers.di
 
-import com.example.gallerywallpapers.data.datasources.CategoryLocalDataSource
+import com.example.gallerywallpapers.data.datasources.CategoryDataSource
 import com.example.gallerywallpapers.data.repositories.GalleryRepositoryImpl
 import com.example.gallerywallpapers.domain.interfaces.GalleryRepository
 import dagger.Binds
@@ -19,7 +19,7 @@ abstract class AppBindModule {
     ): GalleryRepository
 
     @Binds
-    abstract fun stringsListImpl_to_CategoryLocalDataSource(
-        stringsListImpl: CategoryLocalDataSource.StringsListImpl
-    ): CategoryLocalDataSource
+    abstract fun localImpl_to_CategoryDataSource(
+        localImpl: CategoryDataSource.LocalImpl
+    ): CategoryDataSource
 }
