@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Gallery wallpapers</string>
+
+    <string name="title_main">Main</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_wallpaper">Wallpaper</string>
+    <string name="message_error_data_load">Could not load data</string>
+    <string name="snackbar_reload">Reload</string>
+    <string name="ui_text_header_categories">Wallpaper categories</string>
+    <string name="ui_text_header_error">Data is not available</string>
+    <string name="ui_text_header_previews">Wallpaper previews</string>
+    <string name="desc_item_image">Wallpaper preview</string>
+    <string name="desc_image">Wallpaper view</string>
+    <string name="button_text_set_wallpaper">Set wallpaper</string>
+    <string name="message_wall_installed">Wallpaper installed</string>
+    <string name="message_wall_install_error">Error: Wallpaper did not install</string>
 </resources>

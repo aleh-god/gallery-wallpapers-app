@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@+id/navigation_main"
+    >
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.gallerywallpapers.ui.main.MainFragment"
+        android:label="@string/title_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_navigation_main_to_navigation_gallery"
+            app:destination="@id/navigation_gallery" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_gallery"
+        android:name="com.example.gallerywallpapers.ui.gallery.GalleryFragment"
+        android:label="@string/title_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <argument
+            android:name="category"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_navigation_gallery_to_navigation_wallpaper"
+            app:destination="@id/navigation_wallpaper" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_wallpaper"
+        android:name="com.example.gallerywallpapers.ui.wallpaper.WallpaperFragment"
+        android:label="@string/title_wallpaper"
+        tools:layout="@layout/fragment_wallpaper" >
+        <argument
+            android:name="largeImageURL"
+            app:argType="string"
+            />
+    </fragment>
+</navigation>
