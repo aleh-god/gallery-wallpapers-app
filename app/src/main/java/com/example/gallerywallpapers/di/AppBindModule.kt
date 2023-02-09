@@ -1,5 +1,6 @@
 package com.example.gallerywallpapers.di
 
+import com.example.gallerywallpapers.androidutils.WallpaperManagerBehaviour
 import com.example.gallerywallpapers.data.datasources.CategoryDataSource
 import com.example.gallerywallpapers.data.repositories.GalleryRepositoryImpl
 import com.example.gallerywallpapers.domain.interfaces.GalleryRepository
@@ -22,4 +23,9 @@ abstract class AppBindModule {
     abstract fun localImpl_to_CategoryDataSource(
         localImpl: CategoryDataSource.LocalImpl
     ): CategoryDataSource
+
+    @Binds
+    abstract fun androidImpl_to_WallpaperManagerBehaviour(
+        localImpl: WallpaperManagerBehaviour.AndroidImpl
+    ): WallpaperManagerBehaviour
 }
