@@ -2,11 +2,11 @@ package com.example.gallerywallpapers.data.datasources
 
 import javax.inject.Inject
 
-interface CategoryLocalDataSource {
+interface CategoryDataSource {
 
     suspend fun getCategories(): List<String>
 
-    class StringsListImpl @Inject constructor() : CategoryLocalDataSource {
+    class LocalImpl @Inject constructor() : CategoryDataSource {
 
         private val categories = listOf<String>(
             "backgrounds",
@@ -31,7 +31,6 @@ interface CategoryLocalDataSource {
             "music"
         )
 
-        override suspend fun getCategories(): List<String> =
-            categories
+        override suspend fun getCategories(): List<String> = categories
     }
 }
