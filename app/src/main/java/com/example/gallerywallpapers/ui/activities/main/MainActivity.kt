@@ -1,7 +1,8 @@
-package com.example.gallerywallpapers
+package com.example.gallerywallpapers.ui.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.gallerywallpapers.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
